@@ -32,12 +32,16 @@ app.get('/login', function(req,res){
 	res.render("login.html");
 });
 
+app.get('/listEmp', function(req,res){
+	res.render("ListEmployees.html");
+});
+
 //navigate from login
 loginRouter.route("/")
 	.get(function(req, res){
 		console.log('login router called');
-		res.send("login success");
-		//res.render("ListEmployees.html");
+		//res.send("login success");
+		res.render("ListEmployees.html");
 	});
 loginRouter.route("/admin")
 	.get(function(req, res){
