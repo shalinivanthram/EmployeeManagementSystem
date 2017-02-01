@@ -16,6 +16,7 @@ var cfenv = require('cfenv');
 var engines = require('consolidate');
 
 var loginRouter = express.Router();
+var login = require("./Controller/login");
 
 // create a new express server
 var app = express();
@@ -30,6 +31,10 @@ app.set('view engine', 'html');
 //render login.html
 app.get('/login', function(req,res){
 	res.render("login.html");
+});
+app.post('/login', function(req,res,next){
+	console.log("test: " + JSON.stringify(req.body));
+	//login.getList(req,res);
 });
 
 app.get('/listEmp', function(req,res){
