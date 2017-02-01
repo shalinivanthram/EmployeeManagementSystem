@@ -36,8 +36,8 @@ app.get('/login', function(req,res){
 loginRouter.route("/")
 	.get(function(req, res){
 		console.log('login router called');
-		//res.send("login success");
-		res.render("ListEmployees.html");
+		res.send("login success");
+		//res.render("ListEmployees.html");
 	});
 loginRouter.route("/admin")
 	.get(function(req, res){
